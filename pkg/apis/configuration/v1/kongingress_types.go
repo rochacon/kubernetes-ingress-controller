@@ -74,17 +74,17 @@ type KongIngressService struct {
 	Retries *int `json:"retries,omitempty" yaml:"retries,omitempty"`
 
 	// The timeout in milliseconds for establishing a connection to the upstream server.
-	//+kubebuilder:validation:Minimum=0
+	//+kubebuilder:validation:Minimum=1
 	ConnectTimeout *int `json:"connect_timeout,omitempty" yaml:"connect_timeout,omitempty"`
 
 	// The timeout in milliseconds between two successive read operations
 	// for transmitting a request to the upstream server.
-	//+kubebuilder:validation:Minimum=0
+	//+kubebuilder:validation:Minimum=1
 	ReadTimeout *int `json:"read_timeout,omitempty" yaml:"read_timeout,omitempty"`
 
 	// The timeout in milliseconds between two successive write operations
 	// for transmitting a request to the upstream server.
-	//+kubebuilder:validation:Minimum=0
+	//+kubebuilder:validation:Minimum=1
 	WriteTimeout *int `json:"write_timeout,omitempty" yaml:"write_timeout,omitempty"`
 }
 
